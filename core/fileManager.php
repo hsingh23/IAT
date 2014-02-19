@@ -1,4 +1,9 @@
 <?php
+$mysql_host = "mysql4.000webhost.com";
+$mysql_database = "a9114969_IAT555";
+$mysql_user = "a9114969_exp555";
+$mysql_password = "myIAT555";
+
 $base_dir = realpath(dirname(__FILE__));
 
 $newTemplate = array(
@@ -490,18 +495,18 @@ if( isset($_REQUEST['op']) )
 					if( isset($_REQUEST['data']) )
 					{	
 						
-						$dsn = "mysql:host=localhost";
+						$dsn = "mysql:host={$mysql_host}";
 						try {
-							$pdo = new PDO($dsn, "IATexp555","myIAT");
+							$pdo = new PDO($dsn, "{$mysql_user}","{$mysql_password}");
 						}
 						catch(PDOException $e) { 
                 			echo 'ERROR: ' . $e->getMessage();
                 			break;
             			}
             			
-            			$dsn = "mysql:host=localhost";
-						$pdo = new PDO($dsn, "IATexp555","myIAT");
-						$pdo->query("USE `IAT555`;");
+            			$dsn = "mysql:host={$mysql_database}";
+						$pdo = new PDO($dsn, "{$mysql_user}","{$mysql_password}");
+						$pdo->query("USE `{$mysql_database}`;");
 						
 						$sub = isset( $_REQUEST['subject'] ) ? $_REQUEST['subject'] : 'unknown2' ; //Subject Identifier
 						$data = $_REQUEST["data"]; 
@@ -534,9 +539,9 @@ if( isset($_REQUEST['op']) )
 							{
     						echo "The file $filename does not exist";
     						//error_log(print_r("The file $filename does not exist", TRUE));
-							$dsn = "mysql:host=localhost";
+							$dsn = "mysql:host={$mysql_database}";
 							try {
-								$pdo = new PDO($dsn, "IATexp555","myIAT");
+								$pdo = new PDO($dsn, "{$mysql_user}","{$mysql_password}");
 								//error_log(print_r("Database exists", TRUE));
 								echo 'success';
 							}
@@ -557,9 +562,9 @@ if( isset($_REQUEST['op']) )
 					{
 						
 
-            			$dsn = "mysql:host=localhost";
-            			$pdo = new PDO($dsn, "IATexp555","myIAT");
-						$pdo->query("USE `IAT555`;");
+            			$dsn = "mysql:host={$mysql_database}";
+            			$pdo = new PDO($dsn, "{$mysql_user}","{$mysql_password}");
+						$pdo->query("USE `{$mysql_database}`;");
 						$templatename=$_REQUEST['template'];
 						$showresult=$_REQUEST['showresult'];
 						$queryinsert = $pdo->prepare("INSERT INTO INSERT INTO Item(Items) VALUES ('$showresult');");
