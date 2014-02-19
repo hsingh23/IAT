@@ -12,9 +12,9 @@ function randomString(length) {
 function initialize()
 {	
 	// get active template & load data into global variable
-	$.getJSON("templates/active.txt", function(input) {
+	$.getJSON("templates/active.txt.html", function(input) {
 		document.title = input.active + " IAT";
-		$.getJSON("templates/"+input.active+"/input.txt", function(data) { 
+		$.getJSON("templates/"+input.active+"/input.txt.html", function(data) { 
 			template = data;
 			$.get("core/instruct0.html", function(data) {
 				$("#instructions").html(data);
