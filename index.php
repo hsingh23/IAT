@@ -4,8 +4,13 @@
 <title>Online IAT</title>	
 <link type="text/css" href="core/css/overcast/jquery-ui-1.8.18.custom.css" rel="stylesheet" />
 <style type="text/css"> @import "core/css/iat.css";</style>	
+<script type="text/javascript" src="core/js/jquery-1.7.1.min.js"></script>
+<script type="text/javascript" src="core/js/jquery-ui-1.8.18.custom.min.js"></script>
+<script type="text/javascript" src="core/js/IAT.js"></script>
+<script type="text/javascript">
+	initialize();
+</script>
 </head>
-
 
 <body>
     
@@ -15,12 +20,3 @@
 </div>
 
 </body>
-<script type="text/javascript" src="core/js/jquery-1.7.1.min.js"></script>
-<script type="text/javascript" src="core/js/jquery-ui-1.8.18.custom.min.js"></script>
-<script type="text/javascript" src="core/js/IAT.js"></script>
-<script type="text/javascript">
-$(document).ready(function (){
-	initialize();
-});
-</script>
-</html>
