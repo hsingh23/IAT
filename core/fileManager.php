@@ -5,7 +5,7 @@ $mysql_user = "a9114969_exp555";
 $mysql_password = "myIAT555";
 
 $base_dir = realpath(dirname(__FILE__));
-
+date_default_timezone_set('US/Central');
 $newTemplate = array(
 	"name" => "",
 	"showResult" => "true",
