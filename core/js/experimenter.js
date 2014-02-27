@@ -69,8 +69,8 @@ var FileMgr = {
 	
 	TEMPLATE_FILE:	"templateForm.html",
 	FILEMGR_FILE:	"fileManager.php",
-	ACTIVE_FILE:	"active.txt.html",
-	INPUT_FILE:		"input.txt.html",
+	ACTIVE_FILE:	"active.txt",
+	INPUT_FILE:		"input.txt",
 
 	getFileMgrPath: function() { return this.CORE_DIR + this.FILEMGR_FILE; },
 	getTemplateFormPath: function() { return this.CORE_DIR + this.TEMPLATE_FILE; },
