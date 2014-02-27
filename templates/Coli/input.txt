@@ -1,0 +1,1 @@
+{"name":"Coli","showResult":"show","IATtype":"two","catA":{"label":"Category A","datalabel":"A","itemtype":"txt","items":["heyA"]},"catB":{"label":"Category B","datalabel":"B","itemtype":"txt","items":["heyB"]},"cat1":{"label":"Category 1","datalabel":"1","itemtype":"txt","items":["Yo1"]},"cat2":{"label":"Category 2","datalabel":"2","itemtype":"txt","items":["Yo2"]}}
